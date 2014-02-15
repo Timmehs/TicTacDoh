@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/space_r"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical"
+    android:padding="15dp"
+    >
+
+<TableLayout 
+    android:id="@+id/tableLayout1"
+    android:stretchColumns="field"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:gravity="center"
+      >
+
+   	<TableRow
+   	    android:paddingTop="@dimen/activity_horizontal_margin" >
+
+       <ImageButton
+           android:id="@+id/sp1"
+           android:layout_height="100dp"
+           android:layout_weight="1"
+           android:contentDescription="@string/app_name"
+           android:src="@drawable/blank"
+           android:scaleType="fitXY"
+           />
+ 
+       <ImageButton
+           android:id="@+id/sp2"
+           android:layout_weight="1"
+           android:layout_height="100dp"
+           android:contentDescription="@string/app_name"
+           android:src="@drawable/blank"
+           android:scaleType="fitXY"
+           />
+ 
+       <ImageButton
+           android:id="@+id/sp3"
+           android:layout_weight="1"
+           android:layout_height="100dp"
+           android:contentDescription="@string/app_name"
+           android:src="@drawable/blank"
+           android:scaleType="fitXY"
+           />
+ 
+   </TableRow> 
+
+   <TableRow>
+
+      <ImageButton
+          android:id="@+id/sp4"
+          android:layout_height="100dp"
+          android:layout_weight="1"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/blank"
+          android:scaleType="fitXY"
+          />
+ 
+      <ImageButton
+          android:id="@+id/sp5"
+          android:layout_height="100dp"
+          android:layout_weight="1"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/blank"
+          android:scaleType="fitXY"
+          />
+ 
+      <ImageButton
+          android:id="@+id/sp6"
+          android:layout_weight="1"
+          android:layout_height="100dp"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/blank"
+          android:scaleType="fitXY"
+          />
+      
+   </TableRow> 
+
+   <TableRow> 
+
+       <ImageButton
+           android:id="@+id/sp7"
+           android:layout_height="100dp"
+           android:layout_weight="1"
+           android:contentDescription="@string/app_name"
+           android:src="@drawable/blank"
+           android:scaleType="fitXY"
+           />
+
+      	<ImageButton
+      	    android:id="@+id/sp8"
+      	    android:layout_weight="1"
+      	    android:layout_height="100dp"
+      	    android:contentDescription="@string/app_name"
+      	    android:src="@drawable/blank"
+      	    android:scaleType="fitXY"
+      	    />
+ 
+        <ImageButton
+            android:id="@+id/sp9"
+            style="@style/AppBaseTheme"
+            android:layout_height="100dp"
+           	android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/blank" 
+            android:scaleType="fitXY"
+            />
+ 
+   </TableRow>
+ </TableLayout> 
+
+</LinearLayout>
+	
+

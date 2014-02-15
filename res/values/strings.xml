@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TicTacDoh!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="game_header">Tic-Tac-DOH!</string>
+    <string name="title_activity_main_activity">MainActivity</string>
+    <string name="human_text">Human</string>
+    <string name="cpu_text">Computer</string>
+    <string name="human_score">0</string>
+    <string name="cpu_score">0</string>
+
+</resources>
