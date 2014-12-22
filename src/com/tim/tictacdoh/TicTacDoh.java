@@ -116,7 +116,6 @@ public class TicTacDoh extends Activity {
 			winner.btn.setImageResource(R.drawable.o);
 			glass.start();
 			winner.setState(4);
-			Log.d(TAG, "Used winningMove() method on " + winner.toString() );
 			return;	
 		}
 		//CHECK CENTER, PLAY IF AVAILABLE
@@ -125,26 +124,24 @@ public class TicTacDoh extends Activity {
 				sp5.btn.setImageResource(R.drawable.o);
 				glass.start();
 				sp5.setState(4);
-				Log.d(TAG, "Computer Played Center");
 				return;
 			}
 			//PLAY AVAILABLE CORNERS
 			else if(corners[j].isPlayable()){
-						corners[j].btn.setImageResource(R.drawable.o);
-						glass.start();
-						corners[j].setState(4);
-						Log.d(TAG, "Computer Played Corner");
-						return;
+				corners[j].btn.setImageResource(R.drawable.o);
+				glass.start();
+				corners[j].setState(4);
+				return;
 			} else {
 				//SCAN FOR AVAILABLE MOVE
 				for(int i = 0; i < 8; i++){
-							if(pieces[i].isPlayable()){
-								pieces[i].btn.setImageResource(R.drawable.o);
-								glass.start();
-								pieces[i].setState(4);
-								Log.d(TAG, "Computer Played Next Available Move");
-								return;
-							}
+					if(pieces[i].isPlayable()){
+						pieces[i].btn.setImageResource(R.drawable.o);
+						glass.start();
+						pieces[i].setState(4);
+						Log.d(TAG, "Computer Played Next Available Move");
+						return;
+					}	
 				}
 			}
 		
@@ -167,7 +164,6 @@ public class TicTacDoh extends Activity {
 			BoardPiece[] thisPlay = playBook[i];
 			int rowSum = thisPlay[0].state + thisPlay[1].state + thisPlay[2].state;
 			if(rowSum == 2){
-				Log.d(TAG, "play" + (i+1)+ " was found to have rowSum of 2");
 				for(int j = 0; j < 3;j++){
 					if(thisPlay[j].isPlayable()){
 						return thisPlay[j];
@@ -213,7 +209,7 @@ public class TicTacDoh extends Activity {
 		for(int i = 0; i<8;i++){
 			BoardPiece[] thisPlay = playBook[i];
 			int rowSum = thisPlay[0].state + thisPlay[1].state + thisPlay[2].state;
-			Log.d(TAG,"Sum of play" + (i+1) + " is " + rowSum);
+
 			//CHECK FOR HUMAN WIN
 			if(rowSum == 3){
 				theWinner = "human";
@@ -222,12 +218,6 @@ public class TicTacDoh extends Activity {
 			} //CHECK EACH POSSIBLE PLAY FOR CPU WIN
 				else if (rowSum == 12){
 				theWinner = "computer";
-				Log.d(TAG, sp1.state + " | " + sp2.state + " | " + sp3.state);
-				Log.d(TAG, "------------");
-				Log.d(TAG, sp4.state + " | " + sp5.state + " | " + sp6.state);
-				Log.d(TAG, "------------");
-				Log.d(TAG, sp7.state + " | " + sp8.state + " | " + sp9.state);
-				Log.d(TAG, "checkEnd() found winner on play" + (i+1) + ". The " + theWinner + " won");
 				announceWinner();
 				
 			}
